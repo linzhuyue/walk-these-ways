@@ -2,7 +2,7 @@ from setuptools import find_packages
 from distutils.core import setup
 
 setup(
-    name='go1_gym',
+    name='go1_gym_deploy',
     version='1.0.0',
     author='Gabriel Margolis',
     license="BSD-3-Clause",

@@ -1,0 +1,1 @@
+lcmtypes/rc_command_lcmt.class lcmtypes/sim2real_leg_cmd.class lcmtypes/sim2real_leg_data.class lcmtypes/state_estimator_sim2real.class

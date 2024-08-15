@@ -12,7 +12,7 @@ run:
 		--volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
 		--env="XAUTHORITY=${XAUTH}" \
 		--volume="${XAUTH}:${XAUTH}" \
-		--volume="/home/unitree/go1_gym:/home/isaac/go1_gym" \
+		--volume="/home/linzhu/code_should_rewrite/rb_mpc/cheetah/walk-these-ways/mydeploy/go1_gym:/home/isaac/go1_gym" \
 		--privileged \
 		--runtime=nvidia \
 		--net=host \
@@ -28,7 +28,7 @@ autostart:
 		--volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
 		--env="XAUTHORITY=${XAUTH}" \
 		--volume="${XAUTH}:${XAUTH}" \
-		--volume="/home/unitree/go1_gym:/home/isaac/go1_gym" \
+		--volume="/home/linzhu/code_should_rewrite/rb_mpc/cheetah/walk-these-ways/mydeploy/go1_gym:/home/isaac/go1_gym" \
 		--privileged \
 		--runtime=nvidia \
 		--net=host \

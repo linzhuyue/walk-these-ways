@@ -1,11 +1,12 @@
 # syntax=docker/dockerfile:experimental
 
-FROM nvcr.io/nvidia/l4t-pytorch:r32.6.1-pth1.9-py3
+# FROM nvcr.io/nvidia/l4t-pytorch:r32.6.1-pth1.9-py3
+FROM nvcr.io/nvidia/pytorch:21.09-py3
 
 #ENV NVIDIA_VISIBLE_DEVICES ${NVIDIA_VISIBLE_DEVICES:-all}
 #ENV NVIDIA_DRIVER_CAPABILITIES ${NVIDIA_DRIVER_CAPABILITIES:+$NVIDIA_DRIVER_CAPABILITIES,}graphics
 
-# add new sudo user
+# add new sudo user for local
 ENV USERNAME improbable
 ENV HOME /home/$USERNAME
 RUN useradd -m $USERNAME && \

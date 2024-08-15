@@ -13,7 +13,8 @@ if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]
 then
     # load docker image
     echo "[Step 1] Extracting docker image..."
-    docker load -i ../scripts/deployment_image.tar
+    # docker load -i ../scripts/deployment_image.tar
+    docker load -i /home/linzhu/code_should_rewrite/rb_mpc/cheetah/walk-these-ways/mydeploy/deployment_image.tar
     printf "\nDone!\n"
 else
     echo "Quitting"

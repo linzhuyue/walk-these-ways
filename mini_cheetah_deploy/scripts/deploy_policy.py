@@ -1,12 +1,20 @@
+
+# import sys
+# import os
+
+# # Add the root directory of the project to sys.path
+# sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+import sys
+sys.path.append("..")
+
+from utils.deployment_runner import DeploymentRunner
+from envs.lcm_agent import LCMAgent
+from utils.cheetah_state_estimator import StateEstimator
+from utils.command_profile import *
 import glob
 import pickle as pkl
 import lcm
 import sys
-
-from ..utils.deployment_runner import DeploymentRunner
-from ..envs.lcm_agent import LCMAgent
-from ..utils.cheetah_state_estimator import StateEstimator
-from ..utils.command_profile import *
 
 
 import pathlib
@@ -33,7 +41,7 @@ def load_and_run_policy(label, experiment_name, max_vel=1.0, max_yaw_vel=1.0):
     hardware_agent = LCMAgent(cfg, se, command_profile)
     se.spin()
 
-    from go1_gym_deploy.envs.history_wrapper import HistoryWrapper
+    from envs.history_wrapper import HistoryWrapper
     hardware_agent = HistoryWrapper(hardware_agent)
 
     policy = load_policy(logdir)
